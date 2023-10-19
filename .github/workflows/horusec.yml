@@ -13,6 +13,6 @@ jobs:
         fetch-depth: 0
     - name: Running Horusec Security
       run: |
-        sudo apt-get install -y docker-ce=19.03.11
+        sudo apt-cache show docker-ce
         curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
         horusec start -p="./" -e="true"   
